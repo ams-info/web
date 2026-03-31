@@ -250,9 +250,9 @@ h3 {
     margin: 10px 0;
 }
 
-.about-col:hover {
+/* .about-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
-}
+} */
 
 
 @media(max-width:700px) {
@@ -260,6 +260,11 @@ h3 {
     .row {
         flex-direction: column;
     }
+
+    .about-col{
+        margin-top:50px;
+    }
+
 
 }
 
@@ -345,9 +350,34 @@ h3 {
 }
 
 .facilities-col h3 {
-    margin-top: 16px;
+    margin-top: 50px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
+}
+
+
+.facilities-col {
+    text-align: center;
+    text-decoration: none;
+    
+    /* Centers inline elements like buttons inside this div */
+}
+
+.download-btn {
+    display: inline-block; /* ensures button behaves like inline element for centering */
+    padding: 10px 20px;
+    background-color: #007bff; /* your button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* spacing from paragraph */
+}
+
+
+@media(max-width: 700px) {
+    .facilities-col{
+        margin-top: 50px;
+    }
 }
 
 
@@ -427,20 +457,67 @@ h3 {
 /* --------footer-------- */
 
 .footer {
-    width: 100%;
+    background-color: #1A1A1A;
+    /* dark footer */
+    color: #fff;
+    font-size: 0.95rem;
     text-align: center;
-    padding: 30px 0;
+    margin-top: 50px;
 }
 
+.footer h3,
 .footer h4 {
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
+    color: #FFFFFF;
+    /* matching red accent */
+    margin-bottom: 15px;
 }
 
-.icons .fa {
+.footer p {
+    color: #D3D3D3;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #D3D3D3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
     color: #f44336;
-    margin: 0 13px;
-    cursor: pointer;
-    padding: 18px 0;
+
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+}
+
+/* Optional: smaller horizontal rule */
+.footer hr {
+    border-top: 1px solid #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .footer h3,h4{
+        font-size:1rem;;
+    }
+
+    .footer-social {
+        margin-top: 15px;
+    }
 }
