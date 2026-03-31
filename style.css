@@ -4,10 +4,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.png);
+    background-image: linear-gradient(rgba(44, 28, 28, 0.217), rgb(0, 0, 0)), url(images/redbanner.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -15,13 +16,14 @@
 
 nav {
     display: flex;
-    padding: 2% 6%;
+    padding: 1% 6%;
     justify-content: space-between;
     align-items: center;
 }
 
 nav img {
-    width: 150px;
+    width: 60px;
+    border-radius: 10px;
 }
 
 .nav-links {
@@ -56,9 +58,14 @@ nav img {
     width: 100%;
 }
 
+.active {
+    background: #f44336;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
 .text-box {
-    width: 90%;
-    color: #fff;
+    width: 90%;    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,14 +73,37 @@ nav img {
     text-align: center;
 }
 
+.text-box img{
+    width: 100px;
+    border-radius: 10px;
+}
+
+
+.text-box h2 {
+    margin-top: 5px;
+    font-size: 30px;    
+    text-align: center;
+    font-family: 'Raleway', sans-serif;    
+    color:#f44336;
+    font-weight: 700;
+    
+}
+
 .text-box h1 {
-    font-size: 62px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0); /* subtle 3D shadow */
+    
 }
 
 .text-box p {
-    margin: 10px 0 40px;
     font-size: 14px;
-    color: #fff;
+    color: #d6bf80;
+    text-align: center;
+    
 }
 
 .hero-btn {
@@ -98,16 +128,35 @@ nav .fa {
     display: none;
 }
 
-@media(max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
+@media(max-width: 800px) {
+
+    nav img {
+        width: 50px;
     }
+
+    .text-box h1 {
+        font-size: 30px;
+    }
+
+    .text-box h2 {
+        font-size: 20px;
+
+    }
+
+    .hero-btn {
+    font-size: 8px;
+    padding: 8px 10px;
+}
+
+    /* .text-box p {
+        display: none;
+    } */
 
     .nav-links ul li {
         display: block;
     }
 
-    .nav-links {
+    /* .nav-links {
         position: absolute;
         background: #f44336;
         height: 100vh;
@@ -117,7 +166,21 @@ nav .fa {
         text-align: left;
         z-index: 2;
         transition: 1s;
+    } */
+
+    .nav-links {
+        position: fixed;
+        background: #6f0505;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 1000;
+        transition: 0.5s;
+        padding-top: 20px;
     }
+
 
     nav .fa {
         display: block;
@@ -329,10 +392,10 @@ h3 {
 
 /* --------call to action-------- */
 
-.cta{
+.cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/banner2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -340,34 +403,34 @@ h3 {
     padding: 100px 0;
 }
 
-.cta h1{
+.cta h1 {
     color: #fff;
     margin-bottom: 40px;
     padding: 0;
 }
 
 @media(max-width: 700px) {
-   .cta h1{
-    font-size: 24px;
-   }
+    .cta h1 {
+        font-size: 24px;
+    }
 }
 
 
 /* --------footer-------- */
 
-.footer{
+.footer {
     width: 100%;
     text-align: center;
     padding: 30px 0;
 }
 
-.footer h4{
+.footer h4 {
     margin-bottom: 25px;
     margin-top: 20px;
     font-weight: 600;
 }
 
-.icons .fa{
+.icons .fa {
     color: #f44336;
     margin: 0 13px;
     cursor: pointer;
