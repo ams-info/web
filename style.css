@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;    
 }
 
 
@@ -12,6 +12,26 @@
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+/* HEADER CONTENT */
+.row-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+    
+}
+
+.head-col {
+    flex-basis: 50%;
+    text-align: center;    
+}
+
+.head-col img {
+    width: 60%;
+    border-radius: 100%;
+    align-content: end;    
 }
 
 nav {
@@ -64,58 +84,37 @@ nav img {
     border-radius: 5px;
 }
 
-.text-box {
-    width: 90%;    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box img{
-    width: 100px;
-    border-radius: 10px;
-}
-
-
 .text-box h2 {
-    margin-top: 5px;
-    font-size: 30px;    
-    text-align: center;
-    font-family: 'Raleway', sans-serif;    
-    color:#f44336;
-    font-weight: 700;
-    
+    font-size: 45px;
+    font-weight: 900;
+    color: #f44336;
+    font-family: 'Raleway', sans-serif; 
 }
 
 .text-box h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
     color: white;
-    font-size: 50px;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0); /* subtle 3D shadow */
-    
+    font-size: 45px;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-box p {
     font-size: 14px;
     color: #d6bf80;
-    text-align: center;
-    
 }
 
 .hero-btn {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
+    border: none;
     padding: 12px 34px;
     font-size: 13px;
-    background: transparent;
+    background: #6f0505;
     position: relative;
     cursor: pointer;
+    border-radius: 30px;
 }
 
 .hero-btn:hover {
@@ -128,28 +127,46 @@ nav .fa {
     display: none;
 }
 
-@media(max-width: 800px) {
-
-    .header{
-        min-height: 100vh;
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
     }
 
+    .text-box h2 {
+        font-size: 15px;
+
+    }
+
+    .head-col img {
+        width: 20%;        
+    }
+}
+
+@media(max-width: 1400px) {
+
+    .header{
+        min-height: 60vh;
+    }
+
+    .row-head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .head-col img {
+        width: 30%;        
+    }
+    
     nav img {
         width: 50px;
     }
 
-    .text-box h1 {
-        font-size: 30px;
-    }
-
-    .text-box h2 {
-        font-size: 20px;
-
-    }
+    
 
     .hero-btn {
-    font-size: 8px;
+    font-size: 10px;
     padding: 8px 10px;
+    background-color:#6f0505;
 }
 
     /* .text-box p {
@@ -201,6 +218,10 @@ nav .fa {
     .nav-links ul {
         padding: 30px;
     }
+
+    .nav-links ul li:hover::after{
+        display: none;
+    }
 }
 
 
@@ -216,9 +237,23 @@ nav .fa {
     padding-top: 100px;
 }
 
-h1 {
-    font-size: 36px;
+.about h1 {
+    font-size: 25px;
     font-weight: 600;
+    padding-bottom: 10px;
+    position: relative;
+    color:brown;
+}
+
+.about h1::after {
+    content: '';
+    background: #6f0505;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 p {
@@ -248,6 +283,7 @@ h3 {
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    font-size: 20px;
 }
 
 /* .about-col:hover {
@@ -263,6 +299,14 @@ h3 {
 
     .about-col{
         margin-top:50px;
+    }
+
+    .about h3 {
+        font-size: 18px;
+    }
+
+    .about p{
+        font-size: 12px;
     }
 
 
@@ -330,7 +374,7 @@ h3 {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .facilities-col {
@@ -341,18 +385,21 @@ h3 {
 }
 
 .facilities-col img {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
 }
 
 .facilities-col p {
-    padding: 0;
+    padding: 10px;
+    font-size: 15px;
+    text-align: justify;
 }
 
 .facilities-col h3 {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 20px;
 }
 
 
@@ -371,6 +418,26 @@ h3 {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px; /* spacing from paragraph */
+    font-size: 10px;
+}
+
+.facilities h1 {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    position: relative;
+    color:brown;
+}
+
+.facilities h1::after {
+    content: '';
+    background:#6f0505;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -378,6 +445,23 @@ h3 {
     .facilities-col{
         margin-top: 50px;
     }
+
+    .download-btn{
+        font-size: 10px;
+    }
+
+    .facilities-col img{        
+        width: 70%;
+    }
+
+    .facilities{
+        padding-top: 50px;
+    }
+
+    .facilities p {
+        font-size: 12px;
+    }
+
 }
 
 
